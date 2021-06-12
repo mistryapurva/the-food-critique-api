@@ -1,4 +1,4 @@
-import Mongoose from "mongoose";
+import * as Mongoose from "mongoose";
 
 Mongoose.connect(String(process.env.DB_CONNECTION_STRING))
   .then(() => {

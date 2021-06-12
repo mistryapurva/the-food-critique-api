@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import * as _ from "lodash";
 import { genericExceptionHandler } from "../errors";
 import { authenticateJWT, authorizeJWT } from "../lib/auth";

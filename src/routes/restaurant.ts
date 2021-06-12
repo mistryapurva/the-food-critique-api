@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import { genericExceptionHandler } from "../errors";
 import { IRestaurant } from "../models/Restaurant";
 import * as RestaurantService from "../service/restaurant";

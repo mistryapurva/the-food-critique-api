@@ -1,4 +1,4 @@
-import Mongoose, { Model, Schema, Document } from "mongoose";
+import { Model, Schema, Document, model } from "mongoose";
 
 export enum ReviewStatus {
   ACTIVE = "ACTIVE",
@@ -107,6 +107,6 @@ reviewSchema.index(
   }
 );
 
-const Review: Model<IReview> = Mongoose.model("Review", reviewSchema, "review");
+const Review: Model<IReview> = model("Review", reviewSchema, "review");
 
 export default Review;

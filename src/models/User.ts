@@ -1,4 +1,4 @@
-import Mongoose, { NativeError, Schema, Document, Model } from "mongoose";
+import { NativeError, Schema, Document, Model, model } from "mongoose";
 import * as bcrypt from "bcrypt";
 
 export enum UserType {
@@ -100,6 +100,6 @@ userSchema.index(
   }
 );
 
-const User: Model<IUser> = Mongoose.model("User", userSchema, "user");
+const User: Model<IUser> = model("User", userSchema, "user");
 
 export default User;

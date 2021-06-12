@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import { genericExceptionHandler } from "../errors";
 import { IReview } from "../models/Review";
 import * as ReviewService from "../service/review";

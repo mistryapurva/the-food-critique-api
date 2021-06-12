@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 import { genericExceptionHandler } from "../errors";
 import * as AuthService from "../service/auth";
 import * as _ from "lodash";

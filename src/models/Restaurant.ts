@@ -1,4 +1,4 @@
-import Mongoose, { Schema, Document, Model } from "mongoose";
+import { Schema, Document, Model, model } from "mongoose";
 
 export enum RestaurantStatus {
   ACTIVE = "ACTIVE",
@@ -54,7 +54,7 @@ restaurantSchema.index(
   }
 );
 
-const Restaurant: Model<IRestaurant> = Mongoose.model(
+const Restaurant: Model<IRestaurant> = model(
   "Restaurant",
   restaurantSchema,
   "restaurant"

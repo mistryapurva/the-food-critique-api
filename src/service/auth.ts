@@ -1,7 +1,7 @@
 import { BadRequest, ServerError } from "../errors";
 import * as _ from "lodash";
 import User, { IUser, UserStatus } from "../models/User";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 import { signJWT } from "../lib/auth";
 
 const login = async (payload: any) => {

@@ -1,13 +1,13 @@
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 dotenv.config();
 
-import express from "express";
-import cors from "cors";
+import * as express from "express";
+import * as cors from "cors";
 import "./lib/db";
 import AuthRouter from "./routes/auth";
 import UserRouter from "./routes/user";
 import RestaurantRouter from "./routes/restaurant";
-import ReivewRouter from "./routes/review";
+import ReviewRouter from "./routes/review";
 
 const port = process.env.PORT || 4000;
 
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/auth", AuthRouter);
 app.use("/user", UserRouter);
 app.use("/restaurant", RestaurantRouter);
-app.use("/review", ReivewRouter);
+app.use("/review", ReviewRouter);
 
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
